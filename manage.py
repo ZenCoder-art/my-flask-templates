@@ -1,6 +1,10 @@
-def main():
-    print("Hello from my-flask-templates!")
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+from application import create_app
+
+app = create_app()
 
 
 if __name__ == "__main__":
-    main()
+    app.run(host="0.0.0.0", debug=True, port=8000)
