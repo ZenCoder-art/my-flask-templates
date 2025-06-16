@@ -9,7 +9,7 @@ from application.register import (
 )
 
 
-def create_app():
+def create_application():
     app = Flask(__name__, static_folder="static", template_folder="templates")
     app.config.from_object(config["development"])
     # 初始化扩展

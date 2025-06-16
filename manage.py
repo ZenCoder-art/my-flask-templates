@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-from application import create_app
+from application import create_application
 
-app = create_app()
+app = create_application()
 
 
 if __name__ == "__main__":
