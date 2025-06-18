@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}FlaskX - 现代化Flask模板{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../src/css/base.css">
+    {% block styles %}{% endblock %}
+</head>
+
+<body>
+    <div id="particles-js"></div>
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">
+                    <i class="fas fa-bolt"></i>
+                    FlaskX
+                </a>
+                <button class="mobile-menu-btn" id="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="nav-links" id="nav-links">
+                    <a href="/">首页</a>
+                    <a href="/docs">文档</a>
+                    <a href="/showcase">示例</a>
+                    <a href="/function">功能</a>
+                    <a href="/login">登录</a>
+                    <button class="theme-toggle" id="theme-toggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            {% block content %}{% endblock %}
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-bolt"></i> FlaskX
+                </div>
+                <p>一个现代化的Flask模板，帮助开发者快速构建高质量应用</p>
+
+                <div class="footer-links">
+                    <a href="#">文档</a>
+                    <a href="#">API</a>
+                    <a href="#">示例</a>
+                    <a href="#">博客</a>
+                    <a href="#">支持</a>
+                </div>
+
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-discord"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+
+                <div class="copyright">
+                    &copy; 2023 FlaskX Template. 保留所有权利。
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="../src/js/particles.min.js"></script>
+    <script type="text/javascript" src="../src/js/base.js">
+    </script>
+    {% block scripts %}{% endblock %}
+</body>
+
+</html>

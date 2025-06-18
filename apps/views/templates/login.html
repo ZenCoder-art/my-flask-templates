@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+
+{% block title %}FlaskX - 登录{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="../src/css/login.css">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="login-container">
+        <div class="login-left">
+            <h2>加入FlaskX社区</h2>
+            <p>体验现代化Flask应用开发，享受安全、高效和灵活的Web开发体验</p>
+
+            <ul class="features-list">
+                <li>
+                    <i class="fas fa-shield-alt"></i>
+                    <span>强大的安全保护，包括CSRF防御和加密存储</span>
+                </li>
+                <li>
+                    <i class="fas fa-bolt"></i>
+                    <span>高性能架构，优化响应时间和资源利用</span>
+                </li>
+                <li>
+                    <i class="fas fa-mobile-alt"></i>
+                    <span>完全响应式设计，适配所有设备尺寸</span>
+                </li>
+                <li>
+                    <i class="fas fa-plug"></i>
+                    <span>集成流行扩展，开箱即用的解决方案</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="login-right">
+            <div class="login-header">
+                <h1>欢迎回来</h1>
+                <p>请登录您的账户以继续</p>
+            </div>
+
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="email">邮箱地址</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="email" class="form-control" placeholder="输入您的邮箱" required>
+                    </div>
+                    <div class="error-message" id="email-error">请输入有效的邮箱地址</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">密码</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="password" class="form-control" placeholder="输入您的密码" required>
+                        <button type="button" class="password-toggle" id="password-toggle">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                    <div class="error-message" id="password-error">密码长度至少为8个字符</div>
+                </div>
+                <div class="remember-forgot">
+                    <div class="remember">
+                        <input type="checkbox" id="remember">
+                        <label for="remember">记住我</label>
+                    </div>
+                    <a href="#" class="forgot-password">忘记密码?</a>
+                </div>
+
+                <button type="submit" class="btn-login">登录</button>
+            </form>
+
+            <div class="divider">
+                <span>或使用社交账号登录</span>
+            </div>
+
+            <div class="social-login">
+                <button class="social-btn google">
+                    <i class="fab fa-google"></i>
+                    Google
+                </button>
+                <button class="social-btn github">
+                    <i class="fab fa-github"></i>
+                    GitHub
+                </button>
+                <button class="social-btn facebook">
+                    <i class="fab fa-facebook-f"></i>
+                    Facebook
+                </button>
+            </div>
+
+            <div class="register-link">
+                还没有账户? <a href="/register">立即注册</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script type="text/javascript" src="../src/js/fas.js"></script>
+<script type="text/javascript" src="../src/js/login.js">
+</script>
+{% endblock %}

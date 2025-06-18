@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+
+{% block title %}FlaskX - ShowCase{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="../src/css/showcase.css">
+{% endblock %}
+
+{% block content %}
+<main class="container">
+    <section class="hero">
+        <h1>FlaskX 模板集</h1>
+        <p>看看使用 <strong>FlaskX</strong> 模板打造的站点与应用，灵感来自社区、让你快速起步。</p>
+        <button class="btn-primary"
+            onclick="window.scrollTo({top: document.querySelector('.filter-bar').offsetTop - 80, behavior:'smooth'})">
+            浏览模板
+        </button>
+    </section>
+
+    <div class="filter-bar">
+        <button class="active" data-filter="all">全部</button>
+        <button data-filter="saas">SaaS</button>
+        <button data-filter="blog">博客</button>
+        <button data-filter="dashboard">管理后台</button>
+        <button data-filter="ecommerce">商城</button>
+        <button data-filter="portfolio">作品集</button>
+    </div>
+    <section class="gallery">
+        <a href="#" class="showcase-card" data-tags="saas">
+            <img src="https://source.unsplash.com/random/800x600?figma" alt="Figma">
+            <div class="meta">
+                <h3>Figma</h3>
+                <span>SaaS · 设计工具</span>
+            </div>
+        </a>
+
+        <a href="#" class="showcase-card" data-tags="blog portfolio">
+            <img src="https://source.unsplash.com/random/800x600?resume" alt="Read.cv">
+            <div class="meta">
+                <h3>Read.cv</h3>
+                <span>简历 · 社区博客</span>
+            </div>
+        </a>
+
+        <a href="#" class="showcase-card" data-tags="dashboard saas">
+            <img src="https://source.unsplash.com/random/800x600?dashboard,ui" alt="Superhuman">
+            <div class="meta">
+                <h3>Superhuman</h3>
+                <span>邮件 · Dashboard</span>
+            </div>
+        </a>
+
+        <a href="#" class="showcase-card" data-tags="ecommerce">
+            <img src="https://source.unsplash.com/random/800x600?shop,web" alt="Laravel">
+            <div class="meta">
+                <h3>Laravel Shop</h3>
+                <span>电商 · PHP</span>
+            </div>
+        </a>
+
+        <a href="#" class="showcase-card" data-tags="portfolio">
+            <img src="https://source.unsplash.com/random/800x600?portfolio" alt="Replit">
+            <div class="meta">
+                <h3>Replit</h3>
+                <span>作品集 · DevOps</span>
+            </div>
+        </a>
+        <a href="#" class="showcase-card" data-tags="blog">
+            <img src="https://source.unsplash.com/random/800x600?blog" alt="Tech Blog">
+            <div class="meta">
+                <h3>Tech Insight</h3>
+                <span>博客 · 科技</span>
+            </div>
+        </a>
+        <a href="#" class="showcase-card" data-tags="dashboard">
+            <img src="https://source.unsplash.com/random/800x600?analytics" alt="Analytics">
+            <div class="meta">
+                <h3>Analytics Pro</h3>
+                <span>数据 · Dashboard</span>
+            </div>
+        </a>
+        <a href="#" class="showcase-card" data-tags="ecommerce">
+            <img src="https://source.unsplash.com/random/800x600?fashion" alt="Fashion Mall">
+            <div class="meta">
+                <h3>Fashion Mall</h3>
+                <span>电商 · 时尚</span>
+            </div>
+        </a>
+    </section>
+</main>
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}

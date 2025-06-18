@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-from application import create_application
+from apps import create_application
 
 app = create_application()
 
